@@ -39,15 +39,12 @@ ram.runtime = "500M" # TODO: confirm this
     type = "group"
     default = "visitors"
 
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "select"
-    choices = ["en_EN", "fr_FR"]
-    default = "fr_FR"
-
-    [install.admin]
-    type = "user"
+    [install.federation]
+    type = "string"
+    ask.en = "Enable federation?"
+    help.en = "Turn on cross-server ActivityPub federation features such as remote following, webfinger discovery, etc."
+    choices.enabled = "Yes"
+    choices.disabled = "No"
 
 [resources]
     [resources.sources]

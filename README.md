@@ -14,6 +14,6 @@ Before even starting to run tests, the following needs to happen:
 - [x] Initial `upgrade` script rewrite
 - [x] Initial `backup` script rewrite
 - [x] Initial `remove` script rewrite
-- [ ] nginx config rewrite
+- [x] nginx config rewrite
 
 Then I can start testing and fixing the (presumably numerous) bugs.

@@ -65,7 +65,7 @@ ram.runtime = "500M" # TODO: confirm this
     main.url = "/"
 
     [resources.ports]
-    web.default = 3000
+    web.default = 3214
 
     [resources.apt]
     packages = "libarchive13 imagemagick libassimp-dev"

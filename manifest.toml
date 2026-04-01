@@ -68,7 +68,7 @@ ram.runtime = "500M" # TODO: confirm this
     web.default = 3000
 
     [resources.apt]
-    packages = "libarchive13 imagemagick imagemagick-jpg imagemagick-webp imagemagick-heic assimp-dev"
+    packages = "libarchive13 imagemagick libassimp-dev"
 
     [resources.database]
     type = "postgresql"

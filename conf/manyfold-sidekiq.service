@@ -1,20 +1,20 @@
 [Unit]
-Description=__APP__-web
+Description=__APP__-sidekiq
 After=network.target
 
 [Service]
 Type=simple
 User=__APP__
-WorkingDirectory=__INSTALL_DIR__/live
+WorkingDirectory=__INSTALL_DIR__
 Environment="RAILS_ENV=production"
-Environment="PORT=__PORT_WEB__"
+Environment="DB_POOL=25"
+Environment="MALLOC_ARENA_MAX=2"
 Environment="LD_PRELOAD=libjemalloc.so"
 Environment="PATH=__PATH_WITH_RUBY__"
-ExecStart=__INSTALL_DIR__/live/bin/bundle exec puma -C config/puma.rb
-ExecReload=/bin/kill -SIGUSR1 $MAINPID
+ExecStart=__INSTALL_DIR__/bin/bundle exec sidekiq -c 25
 TimeoutSec=15
 Restart=always
-StandardOutput=append:/var/log/__APP__/__APP__-web.log
+StandardOutput=append:/var/log/__APP__/__APP__-sidekiq.log
 StandardError=inherit
 
 # Proc filesystem

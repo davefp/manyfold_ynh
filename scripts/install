@@ -43,8 +43,6 @@ ynh_script_progression "Adding $app's configuration..."
 
 config="$install_dir/.env.production"
 
-language="$(echo $language | head -c 2)"
-
 secret_key_base=$(ynh_string_random --length=128)
 ynh_app_setting_set --key=secret_key_base --value="$secret_key_base"
 

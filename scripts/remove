@@ -17,20 +17,12 @@ if ynh_hide_warnings yunohost service status "$app-sidekiq" >/dev/null; then
 	yunohost service remove "$app-sidekiq"
 fi
 
-if ynh_hide_warnings yunohost service status "$app-streaming" >/dev/null; then
-	yunohost service remove "$app-streaming"
-fi
-
 # Remove the dedicated systemd config
 ynh_config_remove_systemd "$app-web"
 ynh_config_remove_systemd "$app-sidekiq"
-ynh_config_remove_systemd "$app-streaming"
 
 # Remove the dedicated NGINX config
 ynh_config_remove_nginx
-
-# Remove a cron file
-ynh_safe_rm "/etc/cron.d/$app"
 
 # Remote logrotate config
 ynh_config_remove_logrotate

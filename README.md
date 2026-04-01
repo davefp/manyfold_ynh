@@ -11,9 +11,9 @@ Before even starting to run tests, the following needs to happen:
 - [x] Initial `install` script rewrite
 - [x] Env file rewrite
 - [x] Service file rewrites
-- [ ] Initial `upgrade` script rewrite
-- [ ] Initial `backup` script rewrite
-- [ ] Initial `remove` script rewrite
+- [x] Initial `upgrade` script rewrite
+- [x] Initial `backup` script rewrite
+- [x] Initial `remove` script rewrite
 - [ ] nginx config rewrite
 
 Then I can start testing and fixing the (presumably numerous) bugs.
